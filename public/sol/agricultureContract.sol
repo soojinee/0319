@@ -4,7 +4,7 @@ pragma experimental ABIEncoderV2;
 contract agricultureContract {
 
     uint8 numberOfProducts; // 총 제품의 수입니다.
-    address contractOwner;
+    address contractOwner; 	// 사용자 전자 지갑 구분
 
     struct myStruct {
         uint   number;
@@ -13,13 +13,13 @@ contract agricultureContract {
         uint timestamp;
     }
 
-    myStruct[] public productes;
+    myStruct[] public productes; // ???????? struct구조체를 또 배열로 만들어줌....??????
 
     constructor() public {        
         contractOwner = msg.sender;
     }
 
-    function addProStru (uint _initNumber, string _firstString, string _secondString) public {
+    function addProStru (uint _initNumber, string _firstString, string _secondString) public { // 구조체 안에 해당되는 정보를 넣어줌
         productes.push(myStruct(_initNumber,_firstString,_secondString, now)) -1;
         numberOfProducts++;
     }

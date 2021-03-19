@@ -2,157 +2,154 @@ const { web3 } = window
 const selectedAddress = web3.eth.defaultAccount
 
 $(document).ready(function() {
-    const productRegistryContractAddress = '0x8a07205CDa7603d2391f21f6BD43b2A3Ed8DDF7C';
+    const productRegistryContractAddress = '0x02401300baEfBD76e430d9fdD60d9EAF691660E2';
     const productRegistryContractABI = [
 		{
 			"constant": false,
 			"inputs": [
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_initNumber",
-				"type": "uint256"
-			},
-			{
-				"name": "_firstString",
-				"type": "string"
-			},
-			{
-				"name": "_secondString",
-				"type": "string"
-			}
-		],
-		"name": "addProStru",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [],
-		"name": "killContract",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getAllproducts",
-		"outputs": [
-			{
-				"components": [
-					{
-						"name": "number",
-						"type": "uint256"
-					},
-					{
-						"name": "productName",
-						"type": "string"
-					},
-					{
-						"name": "location",
-						"type": "string"
-					},
-					{
-						"name": "timestamp",
-						"type": "uint256"
-					}
-				],
-				"name": "",
-				"type": "tuple[]"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "getNumOfProducts",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint8"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "_index",
-				"type": "uint256"
-			}
-		],
-		"name": "getProductStruct",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"name": "",
-				"type": "string"
-			},
-			{
-				"name": "",
-				"type": "string"
-			},
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "productes",
-		"outputs": [
-			{
-				"name": "number",
-				"type": "uint256"
-			},
-			{
-				"name": "productName",
-				"type": "string"
-			},
-			{
-				"name": "location",
-				"type": "string"
-			},
-			{
-				"name": "timestamp",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	}
-]
+				{
+					"name": "_initNumber",
+					"type": "uint256"
+				},
+				{
+					"name": "_firstString",
+					"type": "string"
+				},
+				{
+					"name": "_secondString",
+					"type": "string"
+				}
+			],
+			"name": "addProStru",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"constant": false,
+			"inputs": [],
+			"name": "killContract",
+			"outputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"payable": false,
+			"stateMutability": "nonpayable",
+			"type": "constructor"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "getAllproducts",
+			"outputs": [
+				{
+					"components": [
+						{
+							"name": "number",
+							"type": "uint256"
+						},
+						{
+							"name": "productName",
+							"type": "string"
+						},
+						{
+							"name": "location",
+							"type": "string"
+						},
+						{
+							"name": "timestamp",
+							"type": "uint256"
+						}
+					],
+					"name": "",
+					"type": "tuple[]"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [],
+			"name": "getNumOfProducts",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint8"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "_index",
+					"type": "uint256"
+				}
+			],
+			"name": "getProductStruct",
+			"outputs": [
+				{
+					"name": "",
+					"type": "uint256"
+				},
+				{
+					"name": "",
+					"type": "string"
+				},
+				{
+					"name": "",
+					"type": "string"
+				},
+				{
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"constant": true,
+			"inputs": [
+				{
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "productes",
+			"outputs": [
+				{
+					"name": "number",
+					"type": "uint256"
+				},
+				{
+					"name": "productName",
+					"type": "string"
+				},
+				{
+					"name": "location",
+					"type": "string"
+				},
+				{
+					"name": "timestamp",
+					"type": "uint256"
+				}
+			],
+			"payable": false,
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
 
 
     $('#linkHome').click(function() { showView("viewHome") });
@@ -190,8 +187,8 @@ $(document).ready(function() {
     }
 
 	async function showTable() {
-        // $('#viewSubmitDocument>table').html( );
-        // $('#viewSubmitDocument').show();
+         $('#viewSubmitDocument>table').html( );
+         $('#viewSubmitDocument').show();
 
 		if (window.ethereum)
 			try {
